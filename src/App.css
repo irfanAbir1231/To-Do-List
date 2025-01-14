@@ -1,0 +1,59 @@
+/* Basic body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  background-color: #ffffff;
+}
+
+/* Input field styling with transition */
+.addTodo input {
+  transition: border-color 0.3s ease;
+}
+
+/* Input field focus state */
+.addTodo input:focus {
+  border-color: #00bcd4;
+}
+
+/* Todo item styling with transition */
+.todo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Todo item hover state */
+.todo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Slide-out animation for deleting todos */
+.slide-out {
+  animation: slide-out 0.5s forwards;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Keyframes for slide-out animation */
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* Styling for completed todos */
+.line-through {
+  text-decoration: line-through;
+  color: green;
+}
